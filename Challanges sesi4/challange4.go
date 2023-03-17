@@ -5,8 +5,7 @@ import (
 	"os"
 )
 
-func main() {
-
+func cek() {
 	data := map[string]string{
 		"1":  `{"id": "1", "nama": "Anwar Sahid", "Alamat": "sinar Jaya", "Pekerjaan": "developer", "alasan" :"mengisi waktu luang"}`,
 		"2":  `{"id": "2", "nama": "Dian", "Alamat": "sinar Jaya", "Pekerjaan": "developer", "alasan" :"mengisi waktu sempit"}`,
@@ -21,10 +20,14 @@ func main() {
 	}
 
 	id := os.Args[1]
+	fmt.Println(data[id])
 	if id > "10" {
 		fmt.Println("data tidak boleh lebih dari 10 atau harus angka")
 	} else if id < "1" {
 		fmt.Println("data tidak boleh kurang dari 1")
 	}
-	fmt.Println(data[id])
+}
+
+func main() {
+	cek()
 }

@@ -30,7 +30,7 @@ func main() {
 		fmt.Printf("Error: %v\n", err)
 		return
 	}
-	fmt.Println(data[index])
+	fmt.Println("index :" + data[index].Id + ", nama: " + data[index].Nama + ", Alamat: " + data[index].Alamat + ", Alasan: " + data[index].Alamat)
 
 	if index < 0 || index >= len(data) {
 		fmt.Printf("Error: Data tidak sesuai\n")
